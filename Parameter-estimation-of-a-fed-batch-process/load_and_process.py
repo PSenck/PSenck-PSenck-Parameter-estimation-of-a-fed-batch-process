@@ -74,6 +74,8 @@ def load_offline(path, exp_numbers, cols):
     """
 
     offline_files = {"ferm{0}".format(i) : os.path.join(path,"offline_{0}.CSV".format(i)) for i in exp_numbers}
+    #CSV should be converted to csv on Linux/Mac
+    #offline_files = {"ferm{0}".format(i) : os.path.join(path,"offline_{0}.csv".format(i)) for i in exp_numbers}
     offline_raw = {}
 
     for ferm, f in offline_files.items():
